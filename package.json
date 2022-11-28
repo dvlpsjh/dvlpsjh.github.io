@@ -14,9 +14,13 @@
   "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy#readme",
   "scripts": {
     "test": "npx stylelint _sass/**/*.scss",
-    "fixlint": "npx stylelint _sass/**/*.scss --fix"
+    "fixlint": "npx stylelint _sass/**/*.scss --fix",
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-insert": "^0.5.0",
